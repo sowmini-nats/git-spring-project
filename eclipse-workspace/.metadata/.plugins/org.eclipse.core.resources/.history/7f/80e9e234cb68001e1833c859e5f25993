@@ -1,0 +1,6 @@
+package pizzahut;
+
+public interface Deliverable {
+	public static final int deliveryAreaLimit = 2;
+	public boolean delivery();
+}

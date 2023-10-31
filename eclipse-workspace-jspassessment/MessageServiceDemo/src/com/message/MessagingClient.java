@@ -1,0 +1,13 @@
+package com.message;
+
+public class MessagingClient {
+	 MessageService message;
+	 public MessagingClient(MessageService message) {
+		 this.message = message;	
+	 }
+	 public void sendNotification(String msg) {
+//		 message = new EmailMessageService();
+		 System.out.println(message.sendMessage(msg));
+	}
+
+}

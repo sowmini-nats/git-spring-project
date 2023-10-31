@@ -1,0 +1,8 @@
+package com.example.demo.entities;
+
+@Entity
+public class Product {
+	private int prdId;
+	private String prdName;
+	private double prdPrice;
+}

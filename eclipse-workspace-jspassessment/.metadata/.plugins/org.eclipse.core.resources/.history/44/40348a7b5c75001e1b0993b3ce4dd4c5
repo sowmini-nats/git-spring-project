@@ -1,0 +1,15 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Exchange {
+	@Id
+	private int id;
+	private String fromCurrency;
+	private String toCurrency;
+	private double exchangeRate;
+
+	
+}

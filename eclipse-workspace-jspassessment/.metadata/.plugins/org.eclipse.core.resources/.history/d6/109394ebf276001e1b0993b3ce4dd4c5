@@ -1,0 +1,44 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.model.Policy;
+import com.example.demo.service.PolicyService;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@RestController
+@RequestMapping("/policy")
+public class PolicyController {
+	@Autowired
+	PolicyService policyService; 
+	
+	@GetMapping("/add-policy")
+	public ModelAndView displayPolicyForm(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if(session.getAttribute("role").equals("Agent")) {
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("policy",new Policy());
+			mv.setViewName("AddPolicy");
+			return mv;
+		}
+		else {
+			ModelAndView mv = new ModelAndView("redirect:/login");
+			return mv;
+		}
+	}
+	@PostMapping("/add-policy")
+	public ModelAndView addNewPolicy(Policy policy) {
+		policyService.savePolicy(policy);
+		ModelAndView mv = new ModelAndView("redirect:/policy-details");
+		return mv;
+	}
+
+}

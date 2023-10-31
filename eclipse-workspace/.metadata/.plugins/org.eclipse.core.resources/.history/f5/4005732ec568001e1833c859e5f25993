@@ -1,0 +1,22 @@
+package day3;
+
+import java.util.Scanner;
+import java.util.Date;
+public class Reception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter order number:");
+		int orderNo = sc.nextInt();
+		System.out.println("Enter order date (Format:'12-Oct-2023'):");
+		String date = sc.next();
+		Date orderDate = new Date();
+		System.out.println(orderDate);
+	}
+
+}
+// int cost;
+//private String custName;
+//private String custAddress;
+//private int approxDistance;

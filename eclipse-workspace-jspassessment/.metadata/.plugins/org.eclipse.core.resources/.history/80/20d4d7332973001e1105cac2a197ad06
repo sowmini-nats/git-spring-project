@@ -1,0 +1,11 @@
+package com.example.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class DemoController {
+	@GetMapping("hello")
+	public String getHello() {}{
+		return "Hello from Demo Controller"; 
+	}
+}

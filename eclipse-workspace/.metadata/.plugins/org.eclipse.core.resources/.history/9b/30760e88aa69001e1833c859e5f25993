@@ -1,0 +1,67 @@
+package dataentry;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
+public class PartsDataEntry {
+
+	public static void main(String[] args) throws SQLException {
+		Connection con = null;
+		Scanner sc = new Scanner(System.in);
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		}
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			con = DriverManager.getConnection
+					("jdbc:mysql://localhost:3306/supplier","root","Aneethaa1@");
+			System.out.println("Connection established...");
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		PreparedStatement stmt;
+		try {
+			System.out.println("Welcome");
+			System.out.println("Please select an option:\n1.Print all data\n2.Insert data\n3.Delete data\n4.Search data");
+			int choice = sc.nextInt();
+			switch(choice) {
+				case 1:{
+					stmt=con.prepareStatement("select pid,pname,color from parts");
+					ResultSet rs = stmt.executeQuery();
+					while(rs.next()) {
+						System.out.println("Id: "+rs.getInt("pid"));
+						System.out.println("Name: "+rs.getString("pname"));
+						System.out.println("Color: "+rs.getString("color"));
+						System.out.println("------------");
+					}
+				}
+				case 2:{
+					System.out.println("Enter part id:");
+					int id = sc.nextInt();
+					System.out.println("Enter part name:");
+					String name = sc.next();
+					System.out.println("Enter part color:");
+					String color = sc.next();
+					stmt=con.prepareStatement("insert into parts (pid,pname,color) values (?,?,?)");
+					stmt.setInt(1, id);
+					stmt.setString(2, name);
+					stmt.setString(3, color);
+					int record = stmt.executeUpdate();
+					System.out.println(""+record+" record added successfully");
+					
+				}
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,231 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style>
+    body {
+        font-family: arial;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color:orange;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .benefit {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .feature {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+ 
+    h1 {
+        font-size: 28px;
+        color:black;
+        text-align: center;
+    }
+ 
+    .content {
+        font-size: 20px;
+        line-height: 1.6;
+        color:white;
+    }
+ 
+    a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+ 
+    a:hover {
+        background-color: #0056b3;
+    }
+    table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th:hover, td:hover {
+    background-color: #f9f9f9;
+}
+
+
+</style>
+</head>
+<body>
+<jsp:include page="navbar.jsp"/>
+<center>
+<div>
+    <h1>Child Care Insurance</h1>
+    </div>
+    <div class="container">
+    <p class="content">Child Care Insurance, also known as Child Care Liability Insurance, is a specialized type of coverage designed to protect providers of child care services from potential legal and financial liabilities that may arise from accidents, injuries, or incidents that occur while children are under their care.</p>
+</div>
+<br>
+<h1>Benefits</h1>
+ 
+<h2 >Liability Protection</h2>
+<div class="benefit">Child Care Insurance offers liability protection for child care providers. This means it covers legal expenses, medical costs, and potential settlements or judgments if a child under your care is injured or suffers harm due to negligence or accidents.</div>
+<h2>Coverage for Property Damage</h2>
+<div class="benefit">It may also cover property damage caused by the children under your care. This can include damage to your property or belongings caused by the children.</div>
+<h2>Medical Expenses</h2>
+<div class="benefit"> It may cover medical expenses for injuries sustained by a child while under your care. This can include doctor's visits, hospital stays, and other necessary medical treatments.</div>
+<h2>Peace of Mind</h2>
+<div class="benefit">Having Child Care Insurance provides peace of mind to child care providers, knowing that they have financial protection in case of unforeseen circumstances.</div>
+<h2>Professional Image</h2>
+<div class="benefit">Having insurance demonstrates a commitment to safety and professionalism, which can be an important selling point for parents seeking child care services.</div>
+ 
+<br>
+ 
+<h1>Features</h1><br>
+<h2>Coverage for Field Trips and Activities</h2><div class="feature">Childcare insurance may extend coverage to field trips and off-site activities organized by your childcare business.</div>
+<h2>Maturity </h2><div class="feature">Maturity is the stage at which the policy term is completed and the life insurance contract ends.</div>
+<h2>Risk Management Support</h2> <div class="feature">Many insurers offer resources and guidance on risk management practices to help you create a safer environment for the children in your care.</div>
+<h2>Protection for Employees</h2> <div class="feature"></h2> If you have employees, your policy may provide coverage for them as well, safeguarding both your business and your staff.</div>
+<h2>Legal Protection</h2> <div class="feature"> This is the core feature of childcare insurance. It covers bodily injury and property damage claims that may arise from accidents or incidents involving the children in your care.</div>
+<h2>Premium</h2><div class="feature">A premium is the cost the policyholder pays the Child  Care insurance family for covering his/her life.</div>
+</center>
+
+    <table border="1">
+        <tr>
+            <th rowspan="2">Age</th>
+            <th rowspan="2">Maturity Age</th>
+            <th colspan="5">Premium Rates per Rs. 1000 S.A.</th>
+        </tr>
+        <tr>
+            <th>23</th>
+            <th>24</th>
+            <th>25</th>
+            <th>26</th>
+            <th>27</th>
+        </tr>
+        <tr>
+            <td rowspan="4">0</td>
+            <td>111.25</td>
+            <td>107.25</td>
+            <td>103.35</td>
+            <td>99.60</td>
+            <td>95.95</td>
+        </tr>
+        <tr>
+            <td>128.35</td>
+            <td>123.80</td>
+            <td>119.35</td>
+            <td>115.05</td>
+            <td>110.90</td>
+        </tr>
+        <tr>
+            <td>148.15</td>
+            <td>143.05</td>
+            <td>138.05</td>
+            <td>133.20</td>
+            <td>128.50</td>
+        </tr>
+        <tr>
+            <td>170.20</td>
+            <td>164.55</td>
+            <td>159.05</td>
+            <td>153.65</td>
+            <td>148.40</td>
+        </tr>
+    </table>
+
+    <h2>Mode and High S.A. Rebates:</h2>
+    <table border="1">
+        <tr>
+            <th>Mode</th>
+            <th>Rebate</th>
+        </tr>
+        <tr>
+            <td>Yearly mode</td>
+            <td>2% of Tabular Premium</td>
+        </tr>
+        <tr>
+            <td>Half-yearly mode</td>
+            <td>1% of the tabular premium</td>
+        </tr>
+        <tr>
+            <td>Quarterly & Salary deduction</td>
+            <td>NIL</td>
+        </tr>
+    </table>
+
+    <h2>Sum Assured Rebate:</h2>
+    <table border="1">
+        <tr>
+            <th>Sum Assured</th>
+            <th>Rebate (Rs.)</th>
+        </tr>
+        <tr>
+            <td>1,00,000 to 2,99,999</td>
+            <td>Nil</td>
+        </tr>
+        <tr>
+            <td>3,00,000 to 4,99,999</td>
+            <td>1.5 %o S.A.</td>
+        </tr>
+        <tr>
+            <td>5,00,000 and above</td>
+            <td>2 %o S.A.</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+package com.demo;
+
+public class UserValidates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		public boolean isValidUser(String username,String password) {
+			if(username.equals("tester")&&password.equals("password")) {
+				return true;
+			}
+			else 
+				return false;
+		}
+	}
+
+}

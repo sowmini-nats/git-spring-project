@@ -1,0 +1,37 @@
+<%@ page import="com.demo.UserValidate" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+String username = request.getParameter("username");
+String password =request.getParameter("password");
+UserValidate validate = new UserValidate();
+if(validate.isValidUser(username,password)){
+	String role=validate.getRole();
+	session.setAttribute("role", role);
+	session.setAttribute("uname",username);
+	%>
+	<h3>Welcome <%=session.getAttribute("role")%> <%=username%></h3><br/>
+	<h3>Select an option</h3>
+	<ul>
+	<li><a href="DisplayProduct.jsp">Click here to display product list</a></li>
+	<%if(role.equals("Admin")){ %><li><a href="ProductPage.jsp">Click here to insert new product detail</a></li>
+	<%}%> 
+	</ul>
+	<%
+	}
+else{
+	%>
+	<h3 style="color:red">Invalid credentials</h3>
+	<a href="Login.html">Click here to re-login</a>
+	<%
+	}
+%>	
+</body>
+</html>

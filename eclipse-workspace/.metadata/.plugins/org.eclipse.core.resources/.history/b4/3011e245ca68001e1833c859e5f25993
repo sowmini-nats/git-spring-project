@@ -1,0 +1,91 @@
+package day3;
+
+public abstract class Pizza {
+	private String type ;
+	private String toppings;
+	private String name;
+	private float timeForPreparation;
+	private int costOfPizza;
+	private String size;
+
+	Pizza(){
+		type="";
+		toppings="No";
+		name="";
+		timeForPreparation=0;
+		size="";
+	}
+	
+	Pizza(String type, String toppings, String name, float timeForPreparation,String size) {
+		boolean valid=true;
+		if(!type.equals("veg")&&!type.equals("non-veg")) {
+			valid=false;
+			System.out.println("Only veg and non-veg type is allowed");
+		}
+		if(!size.equals("small")&&!size.equals("medium")) {
+			valid=false;
+			System.out.println("Only small and medium size pizzas are available");
+		}
+		if(!valid)
+			return;
+		this.type = type;
+		this.toppings = toppings;
+		this.name = name;
+		this.timeForPreparation = timeForPreparation;
+		this.size = size;
+	}
+	public String toString() {
+		return type+" "+name+" Pizza of "+size+" size with "+toppings+" toppings which take "
+		+timeForPreparation+" min for preparation.";
+	}
+	public abstract int calculateCost();
+
+	public String getType() {
+		return type;
+	}
+
+	public String getToppings() {
+		return toppings;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public float getTimeForPreparation() {
+		return timeForPreparation;
+	}
+
+	public String getSize() {
+		return size;
+	}
+	
+	public int getCostOfPizza() {
+		return costOfPizza;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setToppings(String toppings) {
+		this.toppings = toppings;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setTimeForPreparation(float timeForPreparation) {
+		this.timeForPreparation = timeForPreparation;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
+	public void setCostOfPizza(int costOfPizza) {
+		this.costOfPizza = costOfPizza;
+	}
+
+}

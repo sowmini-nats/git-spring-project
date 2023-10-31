@@ -1,0 +1,34 @@
+package com.demo.MavenDemo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+public class CalculateTest {
+private static Calculate obj;
+@BeforeAll
+public static void setup() {
+	obj = new Calculate();
+}
+@AfterAll
+public static void clear() {
+	obj=null;
+}
+@Test
+public void testAddNums() {
+	Calculate obj = new Calculate();
+	assertEquals(15,obj.addNum(7,8));
+}
+@Test
+public void testOddNums() {
+	Calculate obj = new Calculate();
+	assertTrue(obj.oddNum(7));
+}
+@Test
+public void testEvenNums() {
+	Calculate obj = new Calculate();
+	assertTrue(obj.evenNum(8));
+}
+}

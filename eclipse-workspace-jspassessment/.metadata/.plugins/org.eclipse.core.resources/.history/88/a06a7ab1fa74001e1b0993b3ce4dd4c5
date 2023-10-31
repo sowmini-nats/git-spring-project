@@ -1,0 +1,34 @@
+package com.example.demo.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.User;
+import com.example.demo.repositories.UserRepository;
+
+@Service
+public class LoginService {
+	@Autowired
+	UserRepository userRepository;
+	
+	public String validateUser(int userId, String password) {
+		User user = userRepository.findById(userId).get();
+		if(user != null) {
+			if(password.equals(user.getPassword())){
+				return "Login successful";	
+			}
+			else
+				return "Invalid Password";
+		}
+		else
+			return "No user exists";
+		
+	}
+	
+	public Iterable<User> getAllUsers() {
+		Iterable<User> users=userRepository.findAll();
+		return users;
+	}
+}

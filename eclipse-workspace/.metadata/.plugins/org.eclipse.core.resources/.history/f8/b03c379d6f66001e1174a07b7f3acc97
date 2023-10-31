@@ -1,0 +1,20 @@
+package demo;
+
+import java.util.Set;
+import java.util.HashSet;
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<Integer> s = new HashSet<Integer>();
+		s.add(5);
+		s.add(2);
+		s.add(2);
+		s.add(8);
+		System.out.println(s);
+		for(Integer i:s)
+			System.out.println(i);
+	}
+
+}

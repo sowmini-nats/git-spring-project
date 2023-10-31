@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="com.demo.DisplayProduct,java.util.*,com.demo.Product" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Details</title>
+</head>
+<body>
+<h4>List of all products</h4>
+<%DisplayProduct dp = new DisplayProduct(); 
+List<Product> productList = dp.getProducts();
+for(Product p:productList){  
+    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  
+}  
+%>
+</body>
+</html>

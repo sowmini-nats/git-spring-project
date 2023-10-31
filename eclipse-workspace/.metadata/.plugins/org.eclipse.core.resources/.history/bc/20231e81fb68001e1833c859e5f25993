@@ -1,0 +1,32 @@
+package day4;
+
+public class BillReports {
+	private Bill bills[] = new Bill[5];
+	public void addBill(Bill b) {
+		for(int i=0;i<5;i++) {
+			if(bills[i]==null) {
+				bills[i]=b;
+				break;
+			}
+		}
+	}
+	public boolean updateBill(int billNo,int newTotal) {
+		for(int i=0;i<5;i++) {
+			if(bills[i].getBillNo()==billNo) {
+				bills[i].setTotal(newTotal);
+				return true;
+			}
+		}
+		return false;
+	}
+	public Bill[] getBills() {
+		//return an array of type Bill
+	}
+	public Bill searchBill(int billNo) {
+		for(int i=0;i<5;i++) {
+			if(bills[i].getBillNo()==billNo) {
+				System.out.println(bills[i].toString());
+			}
+		}
+	}
+}

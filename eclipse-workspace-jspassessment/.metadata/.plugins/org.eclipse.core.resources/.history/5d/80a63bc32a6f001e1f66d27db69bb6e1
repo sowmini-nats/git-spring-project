@@ -1,0 +1,23 @@
+package com.demo.SpringDemo.library;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.demo.SpringDemo.SpringConfiguration;
+@Service
+public class ProductComponent {
+	@Autowired
+	private CartComponent cart;
+//	public void setCart() {
+//		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+//		cart = context.getBean(CartComponent.class); 
+//	}
+	public List<String> viewAddCart(String prd){
+		return cart.addProduct(prd);
+	}
+}

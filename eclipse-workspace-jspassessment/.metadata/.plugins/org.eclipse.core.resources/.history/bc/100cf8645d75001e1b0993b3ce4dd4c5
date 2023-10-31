@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Currency</title>
+</head>
+<body>
+<% if(session.getAttribute("userId")!=null){ 
+int id=Integer.parseInt(session.getAttribute("userId").toString());%>
+<div>
+	<button style="align:right"><a href="/login">Login</a></button>
+<form action="" method="post">
+	Foreign currency <input type="text" name="foreigncurr"/><br/><br/>
+	Local currency <input type="text" name="localcurr"/><br/><br/>
+	Enter Amount <input type="number" name="amount"/><br/><br/>
+	<input type="submit" value="Calculate amount"/>
+</form>
+</div>
+
+<%} else{%>
+{response.sendRedirect("HomePage.jsp");};
+<%} %>
+
+</body>
+</html>

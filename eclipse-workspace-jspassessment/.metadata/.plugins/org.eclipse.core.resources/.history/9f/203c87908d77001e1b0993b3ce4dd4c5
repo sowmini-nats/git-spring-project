@@ -1,0 +1,82 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page  import="com.example.demo.model.Policy"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Policy Report</title>
+    <style>
+        .policy-detail {
+            margin: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<jsp:include page="navbar.jsp"/>
+<%
+Policy policy=(Policy)request.getAttribute("policy");
+String name = policy.getPolicyStatus();
+%>
+    <h1>Policy Details</h1>
+
+    <div class="policy-detail">
+        <span class="label">Policy ID:</span> <%= policy.getPolicyId() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Policy Name:</span> <%= policy.getPolicyName() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Coverage Amount:</span> <%= policy.getCoverageAmt() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Premium Amount:</span> <%= policy.getPremiumAmt() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Policy Term:</span> <%= policy.getPolicyTerm() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Effective Date:</span> <%= policy.getEffectiveDate() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Payment Frequency:</span> <%= policy.getPaymentFrequency() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Beneficiary Name:</span> <%= policy.getBeneficiaryName() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Customer Name:</span> <%= policy.getCustomer().getCustFirstName()%> <%= policy.getCustomer().getCustLastName()%> 
+    </div>
+    
+    <div class="policy-detail">
+        <span class="label">Agent Name:</span> <%= policy.getCustomer().getUser().getFirstName()%> <%= policy.getCustomer().getUser().getLastName()%> 
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Policy Status:</span> <%= policy.getPolicyStatus() %>
+    </div>
+
+    <div class="policy-detail">
+        <span class="label">Policy Add-Ons:</span> <%= policy.getPolicyAddOns() %>
+    </div>
+	<%if(session.getAttribute("role")!=null){
+		if(session.getAttribute("role").toString().equals("Manager")){
+		if(name.equals("Pending")){ %>
+    <a href="/manager-approve-policy/<%= policy.getPolicyId() %>">Approve</a>
+    <a href="/manager-reject-policy/<%= policy.getPolicyId() %>">Reject</a>
+    <%}}}%>
+    
+
+</body>
+</html>

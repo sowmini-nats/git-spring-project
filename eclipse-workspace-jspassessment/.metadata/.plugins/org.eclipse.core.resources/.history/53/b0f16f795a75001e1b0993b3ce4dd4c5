@@ -1,0 +1,40 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Exchange {
+	@Id
+	private String currency;
+	private double exchangeRate;
+	
+	public Exchange() {
+		super();
+	}
+	
+	public Exchange(String currency, double exchangeRate) {
+		super();
+		this.currency = currency;
+		this.exchangeRate = exchangeRate;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+	public double getExchangeRate() {
+		return exchangeRate;
+	}
+	public void setExchangeRate(double exchangeRate) {
+		this.exchangeRate = exchangeRate;as
+	}
+
+	@Override
+	public String toString() {
+		return "Exchange [currency=" + currency + ", exchangeRate=" + exchangeRate + "]";
+	}
+	
+}

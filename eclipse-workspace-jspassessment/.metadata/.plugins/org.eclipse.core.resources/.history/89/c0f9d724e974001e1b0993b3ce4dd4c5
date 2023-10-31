@@ -1,0 +1,36 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.model.Product;
+import com.example.demo.model.User;
+import com.example.demo.service.LoginService;
+
+@Controller
+public class LoginController {
+	@Autowired
+	LoginService service;
+	@GetMapping("/login")
+	public String displayLogin() {
+		return "login";
+	}
+	
+	@PostMapping("/login")
+	@ResponseBody
+	public String loginValidation(int userId,String password) {
+		return service.validateUser(userId, password);
+	}
+	
+	@GetMapping("/get")
+	@ResponseBody
+	public String displayProductList(Model model) {
+		Iterable<User> userList=service.getAllUsers();
+		model.addAttribute("userList", userList);
+		return userList.toString();
+	}
+}

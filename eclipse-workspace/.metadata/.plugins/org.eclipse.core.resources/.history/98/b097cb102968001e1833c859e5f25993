@@ -1,0 +1,18 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringUpperStream {
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<String>();
+		list.add("Sowmini");
+		list.add("Sneha");
+		list.add("Sona");
+		list.add("Sangeetha");
+		list.add("Haritha");
+		list.add("Deepthi");
+		List<String> newList = list.stream().map(e->e.toUpperCase()).toList();
+		System.out.println(newList);
+	}
+}

@@ -1,0 +1,29 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class Policy {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int policyId;
+	private String policyName;
+	private int coverageAmt;
+	private double premiumAmt;
+	private int policyTerm;
+	private String effectiveDate;
+	private String expiryDate;
+	private String paymentFrequency;
+	private String beneficiaryName;
+	@OneToOne
+	@JoinColumn(name="custId",referencedColumnName="custId")
+	private Customer customer;
+	private String policyStatus;
+	private String policyAddOns;
+}

@@ -1,0 +1,89 @@
+package com.example.demo.controller;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.model.Customer;
+import com.example.demo.service.CustomerService;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@RestController
+@RequestMapping("/customer")
+public class CustomerController {
+	
+	@Autowired
+	CustomerService customerService; 
+	
+	@GetMapping("/customer-agent-list")
+	public ModelAndView displayCustomerAgentDetail(Model model,HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		String roleType="Agent";
+		if(roleType.equals(session.getAttribute("role"))) {
+			Iterable<Customer> customerAgentList = customerService.getAllAgentCustomers(request);
+			ModelAndView mv=new ModelAndView();
+			mv.addObject("customerAgentList",new Customer());
+			mv.setViewName("CustomerView");
+			return mv;
+		}
+		else {
+			ModelAndView mv=new ModelAndView("redirect:/login");
+			return mv;
+		}
+	}
+	
+	@GetMapping("/customer-list")
+	public ModelAndView displayAllCustomer(Model model,HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		String roleType="Manager";
+		if(roleType.equals(session.getAttribute("role"))) {
+			Iterable<Customer> customerList = customerService.getAllCustomers();
+			ModelAndView mv=new ModelAndView();
+			mv.addObject("customerList",new Customer());
+			mv.setViewName("CustomerView");
+			return mv;
+		}
+		else {
+			ModelAndView mv=new ModelAndView("redirect:/login");
+			return mv;
+		}
+	}
+	
+	@GetMapping("/add-customer")
+	public ModelAndView displayAddAgent(Model model,HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		String roleType="Agent";
+		ModelAndView mv=new ModelAndView();
+		if(roleType.equals(session.getAttribute("role"))) {
+		mv.addObject("customer",new Customer());
+		mv.setViewName("AddCustomer");
+		return mv;
+		}
+		else {
+			ModelAndView mv2 = new ModelAndView("redirect:/login");
+			return mv2;
+		}
+	}
+	
+	@PostMapping("/add-customer")
+	public ModelAndView addCustomer(Customer customer,@RequestParam String date) {
+		booking.setTravelDate(Date.valueOf(date));
+		customerService.addCustomer(customer,date);
+		ModelAndView mv = new ModelAndView("redirect:/customer/customer-agent-list");
+		return mv;
+	}
+	
+}

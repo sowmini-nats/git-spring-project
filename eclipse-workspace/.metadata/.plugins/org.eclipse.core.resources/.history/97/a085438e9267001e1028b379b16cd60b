@@ -1,0 +1,32 @@
+package demo;
+
+public class Customer {
+	private int custNo; 		
+	private String custName;
+	private String custAddr; 
+	void init(){
+		custNo=1;
+		custName="Ram";
+		custAddr="Chennai";
+	}
+	public void display1() {
+		System.out.println("custNo: "+custNo+"\ncustName: "+custName+"\ncustAddr: "+custAddr);
+	}
+}
+
+
+Create an object of Customer 
+
+Use init() for initializing an object of Customer  
+
+Use display() for displaying details of Customer. 
+
+ 
+
+Setters and getters: 
+
+ 
+
+Modify above assignment and define setters and getters methods to initialize or set individual  
+
+variables. Call them from main methods of PizzaHut class. 

@@ -1,0 +1,7 @@
+package com.message;
+
+public class SMSMessageService {
+	String sendMessage(String msg) {
+		return "SMS sent " + msg;
+	}
+}

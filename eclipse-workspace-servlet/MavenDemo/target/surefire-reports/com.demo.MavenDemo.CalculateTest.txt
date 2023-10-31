@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.MavenDemo.CalculateTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.042 s <<< FAILURE! - in com.demo.MavenDemo.CalculateTest
+com.demo.MavenDemo.CalculateTest.testDivException  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.ArithmeticException to be thrown, but nothing was thrown.
+	at com.demo.MavenDemo.CalculateTest.testDivException(CalculateTest.java:39)
+

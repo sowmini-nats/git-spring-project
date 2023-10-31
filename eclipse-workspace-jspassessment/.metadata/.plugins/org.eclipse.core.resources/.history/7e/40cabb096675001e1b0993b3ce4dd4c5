@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Currency</title>
+</head>
+<body>
+<% if(session.getAttribute("userId")!=null){ 
+int id=Integer.parseInt(session.getAttribute("userId").toString());%>
+<div>
+<spring:form action="/addRate" method="post" modelAttribute="exchange">
+	From currency <input type="text" name="fromCurrency"/><br/><br/>
+	To currency <input type="text" name="toCurrency"/><br/><br/>
+	Exchange Rate <input type="number" name="exchangeRate"/><br/><br/>
+	<input type="submit" value="Submit"/>
+</spring:form>
+</div>
+
+<%} else{response.sendRedirect("HomePage.jsp");}%>
+
+</body>
+</html>

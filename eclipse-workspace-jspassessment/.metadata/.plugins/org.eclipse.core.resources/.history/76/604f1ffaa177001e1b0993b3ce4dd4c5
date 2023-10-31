@@ -1,0 +1,244 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    body {
+        font-family: arial;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color:orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .benefit {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .feature {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+ 
+    h1 {
+        font-size: 28px;
+        color:black;
+        text-align: center;
+    }
+ 
+    .content {
+        font-size: 20px;
+        line-height: 1.6;
+        color:white;
+    }
+ 
+    .astyle {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+ 
+    a:hover {
+        background-color: #0056b3;
+    }
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;ss
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th:hover, td:hover {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+</style>
+</head>
+<body>
+<jsp:include page="navbar.jsp"/>
+<center>
+<div>
+    <h1>Vehicle Insurance</h1>
+    </div>
+    <div class="container">
+    <p class="content">Vehicle insurance, often referred to as auto insurance or car insurance, is a contractual agreement between an individual or entity (the policyholder) and an insurance company. This insurance policy provides financial protection in the event of accidents, theft, or damage to a motor vehicle and may also include liability coverage for injuries and property damage caused by the insured vehicle.Vehicle insurance is essential for protecting both your financial interests and the interests of others on the road. It provides peace of mind and helps cover the costs associated with accidents, damage, or theft involving your vehicle.
+</div>
+<br>
+<h1>Benefits</h1>
+ 
+<h2 >Financial Protection</h2>
+<div class="benefit">Vehicle insurance provides financial protection in the event of an accident, theft, or damage to your vehicle. This protection extends to your financial investment in your vehicle and helps cover the cost of repairs or replacement.</div>
+<h2>Liability Coverage</h2>
+<div class="benefit">Liability coverage within vehicle insurance protects you from the financial consequences of causing injuries to others or damaging their property while operating your vehicle. This is particularly important to cover legal expenses and compensation payments.</div>
+<h2>Legal Requirement</h2>
+<div class="benefit"> In many countries and states, having vehicle insurance is a legal requirement for vehicle owners. Operating a vehicle without insurance can result in fines, license suspension, or legal penalties.</div>
+<h2>Coverage for Natural Disasters</h2>
+<div class="benefit">Comprehensive coverage also protects against damage caused by natural disasters such as floods, fires, or storms.</div>
+<h2>Covers Vehicle Theft</h2>
+<div class="benefit">Comprehensive coverage in vehicle insurance helps you recover the value of your vehicle if it is stolen.</div>
+<h2>Helps with Medical Expenses</h2>
+<div class="benefit">Some types of vehicle insurance, like Personal Injury Protection (PIP) or Medical Payments coverage, assist with medical expenses for injuries resulting from an accident.</div>
+ 
+<br>
+ 
+<h1>Features</h1><br>
+<h2>Supports the Economy</h2><div class="feature">Vehicle insurance offers various premium levels and coverage options to fit different budgets. You can choose coverage that suits your financial situation.</div>
+<h2>Fulfillment of Loan or Lease Requirements</h2><div class="feature">If you have a car loan or lease, your lender may require you to maintain comprehensive and collision coverage to protect their financial interest in the vehicle.</div>
+<h2>Reimbursement for Lost Wages</h2> <div class="feature">In the event of an accident that results in injuries, some policies may provide compensation for lost wages due to time off work.</div>
+<h2>Access to Roadside Assistance</h2> <div class="feature">Some insurance providers offer roadside assistance as part of their coverage, providing help in the case of breakdowns, flat tires, or other roadside emergencies.</div>
+<h2>Protection for Others</h2> <div class="feature">Vehicle insurance protects not only you but also other drivers and pedestrians on the road by ensuring that they can receive compensation for injuries and property damage.</div>
+<h2>Affordable Premiums</h2><div class="feature">`Vehicle insurance offers various premium levels and coverage options to fit different budgets. You can choose coverage that suits your financial situation.</div>
+</center>
+<table>
+<thead>
+<tr>
+<th>DIRECT INSURANCE CONTRACT TYPE</th>
+<th>Policy/ Contract</th>
+<th>Policy Coverages</th>
+<th>Participation Details</th>
+<th>Group Insurance</th>
+<th>Policy Funds</th>
+<th>Policy Loans</th>
+<th>Policy Conversions</th>
+<th>Policy Schedule</th>
+<th>Entities</th>
+<th>Product Processors</th>
+<th>Insurance</th>
+<th>Insurance Policy Schedules</th>
+<th>Coverage, Coverage Basis Details</th>
+<th>Participation Details</th>
+<th>Group Beneficiary Details</th>
+<th>Policy Fund, Policy Fund Allocation</th>
+<th>Loan Contracts</th>
+<th>Policy Conversion Details</th>
+<th>Applicability: Although</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Life</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Annuity</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>NA</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Health</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>NA</td>
+<td>NA</td>
+<td>Yes</td>
+
+<td>Yes</td>
+<td>Yes</td>
+<td>Retirement</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Property and Casualty</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>Retirement</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</head>
+ 
+</html>

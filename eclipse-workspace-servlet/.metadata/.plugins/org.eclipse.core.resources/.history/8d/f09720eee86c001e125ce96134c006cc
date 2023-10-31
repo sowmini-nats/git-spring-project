@@ -1,0 +1,44 @@
+package com.demo;
+
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class displaydata {
+	public List<Product> getProducts(){
+	List<Product> list=new ArrayList<Product>(); 
+	Connection con=null;
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	try {
+		 con=DriverManager.getConnection
+				("jdbc:mysql://localhost:3306/productschema","root","Aneethaa1@");
+		System.out.println("Connection Established...");
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	try{
+		PreparedStatement s=con.prepareStatement("select * from product");
+		ResultSet rs= s.executeQuery();
+		while(rs.next()) {
+			Product prd = new Product();
+			prd.setPrdId(rs.getInt("prdId"));
+			prd.setPrdName(rs.getString("prdName"));
+			prd.setPrdPrice(rs.getString("prdPrice"));
+		}
+	}
+	catch(SQLException e) {
+		e.printStackTrace();
+	}
+	return list;
+	}
+}

@@ -1,0 +1,10 @@
+package com.demo.SpringDemo.library;
+
+import java.util.List;
+
+public class ProductComponent {
+	CartComponent cart = new CartComponent();
+	public List<String> viewAddCart(String prd){
+		return cart.addProduct(prd);
+	}
+}

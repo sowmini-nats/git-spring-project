@@ -1,0 +1,10 @@
+package demo;
+
+public class ItalianPizza extends Pizza{
+	public String toString() {
+		);
+		return "Type: "+type+"\nToppings: "+toppings+"\nName: "
+	+name+"\nPreparation Time: "+timeForPreparation;
+	}
+
+}

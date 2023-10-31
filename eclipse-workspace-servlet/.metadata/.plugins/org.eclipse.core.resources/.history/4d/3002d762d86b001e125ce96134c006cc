@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Page</title>
+</head>
+<body>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<td><div><h4>Bag</h4><button><a href="/MyDemoP/ConfirmationServlet.java">Buy</a></button></div></td>
+					<td><div><h4>Laptop</h4><button><a href="/MyDemoP/ConfirmationServlet.java">Buy</a></button></div></td>
+				</tr>
+				<tr>
+					<td><div><h4>Shoe</h4><button><a href="/MyDemoP/ConfirmationServlet.java">Buy</a></button></div></td>
+					<td><div><h4>Books</h4><button><a href="/MyDemoP/ConfirmationServlet">Buy</a></button></td>
+				</tr>
+				<tr>
+					<td><div><h4>Purse</h4><button><a href="/MyDemoP/ConfirmationServlet.java">Buy</a></button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

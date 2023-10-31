@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer View</title>
+    
+</head>
+<style>
+        .animated-table {
+            width: 100%;
+            border-collapse: collapse;
+            animation: fadeIn 1s;
+        }
+        
+        .animated-table th, .animated-table td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        .animated-table th {
+            background-color: #f2f2f2;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+<body>
+    <table class="animated-table">
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email ID</th>
+               	<th>Phone Number</th>
+               	<th>Address</th>
+               	<th>National ID</th>
+               	<th>Marital Status</th>
+               	<th>Occupation</th>
+               	<th>Smoking Status</th>
+                <th>Health Info</th>
+            </tr>
+        </thead>
+        <tbody>
+<c:forEach items="${customerAgentList}" var="item"> 
+<tr>
+		<td><c:out value="${item.custId}"/></td>
+		<td><c:out value="${item.custFirstName}"/></td>
+		<td><c:out value="${item.custLastName}"/></td>
+		<td><c:out value="${item.custDob}"/></td>
+		<td><c:out value="${item.custAge}"/></td>
+		<td><c:out value="${item.custGender}"/></td>
+		<td><c:out value="${item.custEmailId}"/></td>
+		<td><c:out value="${item.custPhoneNumber}"/></td>
+		<td><c:out value="${item.custAddress}"/></td>
+		<td><c:out value="${item.custNationalId}"/></td>
+		<td><c:out value="${item.custMaritalStatus}"/></td>
+		<td><c:out value="${item.custOccupation}"/></td>
+		<td><c:out value="${item.custSmokingStatus}"/></td>
+		<td><c:out value="${item.custHealthInfo}"/></td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+<a href="/add-agent">Add</a>
+</body>
+</html>

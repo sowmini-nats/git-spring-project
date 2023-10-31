@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Bar</title>
+    
+</head>
+<body>
+<% if (session.getAttribute("role") != null) {
+    if (session.getAttribute("role").toString().equals("Agent")) {
+%>
+<ul>
+  	<li><a href="/home">Home</a></li>
+    <li><a href="/customer/customer-agent-list">Customers</a></li>
+    <li><a href="/policy/policy-details">Policies</a></li>
+    <li><a href="/premium-calculator">Premium Calculator</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+<% } else if (session.getAttribute("role").toString().equals("Manager")){ %>
+<ul>
+  	<li><a href="/home">Home</a></li>
+    <li><a href="/manager-customer-detail">Customers & Policies</a></li>
+    <li><a href="//agent-detail">Agents</a></li>
+    <li><a href="/premium-calculator">Premium Calculator</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+<% } } else { %>
+<ul>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/premium-calculator">Premium Calculator</a></li>
+</ul>
+<% } %>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+
+</body>
+
+</html>

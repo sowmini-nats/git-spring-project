@@ -1,0 +1,12 @@
+package com.demo.hibernatebank;
+
+import org.hibernate.SessionFactory;
+
+import com.demo.hibernatebank.config.HibernateUtility;
+
+
+public class App {
+  public static void main(String[] args) {
+	  SessionFactory sessionFactory=HibernateUtility.getSessionFactoryObject();
+  }
+}

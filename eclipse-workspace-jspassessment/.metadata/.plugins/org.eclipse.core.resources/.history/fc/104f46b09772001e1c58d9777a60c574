@@ -1,0 +1,60 @@
+package com.example.demo;
+
+import java.util.Scanner;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.example.demo.entities.Account;
+import com.example.demo.entities.User;
+import com.example.demo.repositories.AccountRepository;
+import com.example.demo.repositories.UserRepository;
+
+@SpringBootApplication
+public class SpringJpaBankApplication {
+
+	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		while(true) {
+//			System.out.println("Select an option:");
+//			System.out.println("1.Register user");
+//			System.out.println("2.Deposit amount");
+//			System.out.println("3.Check balance");
+//			System.out.println("4.Remove user account");
+//			System.out.println("5.Exit...");
+//			int value = sc.nextInt();
+//			if(value==5) {
+//				System.out.println("Thank you!");
+//				break;
+//			}
+//		}
+		
+		SpringApplication.run(SpringJpaBankApplication.class, args);
+	}
+	@Bean
+	public CommandLineRunner demo(UserRepository repository) {
+		return(args)->{
+			System.out.println("New user account creation:");
+			repository.save(new User("pass2","Sona","Chennai",0));
+//			repository.save(new User("pass3","Sangeetha","Chennai"));
+//			repository.save(new User("pass1","Sowmini","Chennai"));
+//			repository.save(new User("pass2","Sona","Chennai"));
+//			repository.save(new User("pass3","Sangeetha","Chennai"));
+//			System.out.println("List of all products before update");
+//			repository.findAll().forEach(System.out::println);
+//			Product prdObj = repository.findById(2).get();
+//			prdObj.setPrdName("Spring Boot");
+//			prdObj.setPrdPrice(3000);
+//			repository.save(prdObj);
+//			repository.save(new Product("C++","Book",1000));
+//			System.out.println("List of all products after update");
+//			repository.findAll().forEach(System.out::println);
+//			Product prdObj1 = repository.findById(2).get();
+//			repository.delete(prdObj1);
+//			System.out.println("List of all products after delete");
+//			repository.findAll().forEach(System.out::println);
+		};
+	}
+}

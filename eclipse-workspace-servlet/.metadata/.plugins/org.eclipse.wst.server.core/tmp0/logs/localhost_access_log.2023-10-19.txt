@@ -1,0 +1,8 @@
+127.0.0.1 - - [19/Oct/2023:09:52:08 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:52:09 +0530] "GET /ProjectJSP/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:52:09 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:52:17 +0530] "POST /ProjectJSP/LoginValidate.jsp HTTP/1.1" 200 301
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:54:36 +0530] "GET /ProjectJSP/DisplayProduct.jsp HTTP/1.1" 200 946
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:55:00 +0530] "POST /ProjectJSP/LoginValidate.jsp HTTP/1.1" 200 382
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:55:03 +0530] "GET /ProjectJSP/ProductPage.jsp HTTP/1.1" 200 425
+0:0:0:0:0:0:0:1 - - [19/Oct/2023:09:55:11 +0530] "POST /ProjectJSP/Product.jsp HTTP/1.1" 200 343

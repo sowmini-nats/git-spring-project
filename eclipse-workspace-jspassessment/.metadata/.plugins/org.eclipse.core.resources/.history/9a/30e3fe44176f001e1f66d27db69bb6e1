@@ -1,0 +1,5 @@
+package com.demo.SpringDemo.library;
+
+public class ProductComponent {
+
+}

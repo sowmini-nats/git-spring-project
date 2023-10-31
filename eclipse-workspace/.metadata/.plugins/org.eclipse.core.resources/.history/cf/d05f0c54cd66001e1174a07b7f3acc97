@@ -1,0 +1,35 @@
+package demo1;
+import java.lang.Comparable;
+public class Student implements Comparable<Student>{
+	private int rollNo; 
+	private String name; 
+	Student(){
+		rollNo=0;
+		name="Unknown";
+	}
+	Student(int rollNo,String name){
+		this.rollNo=rollNo;
+		this.name=name;
+	}
+	public int getRollNo() {
+		return rollNo;
+	}
+	public String getName() {
+		return name;
+	}
+	public String toString() {
+		return "Roll number: "+this.rollNo+"\nName: "+this.name;
+	}
+	@Override
+	public int compareTo(Student o) {
+		return this.name.compareTo(o.getName());
+	}
+	
+//	public void setRollNo(int rollNo) {
+//		this.rollNo = rollNo;
+//	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+	
+}

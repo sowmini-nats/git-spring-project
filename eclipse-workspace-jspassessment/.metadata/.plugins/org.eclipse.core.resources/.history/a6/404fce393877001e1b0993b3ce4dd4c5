@@ -1,0 +1,145 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class Policy {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int policyId;
+	private String policyName;
+	private int coverageAmt;
+	private double premiumAmt;
+	private int policyTerm;
+	private String effectiveDate;
+	private String expiryDate;
+	private String paymentFrequency;
+	private String beneficiaryName;
+	@OneToOne
+	@JoinColumn(name="custId",referencedColumnName="custId")
+	private Customer customer;
+	private String policyStatus;
+	private String policyAddOns;
+	public Policy() {
+		super();
+	}
+	public Policy(int policyId, String policyName, int coverageAmt, double premiumAmt, int policyTerm,
+			String effectiveDate, String expiryDate, String paymentFrequency, String beneficiaryName, Customer customer,
+			String policyStatus, String policyAddOns) {
+		super();
+		this.policyId = policyId;
+		this.policyName = policyName;
+		this.coverageAmt = coverageAmt;
+		this.premiumAmt = premiumAmt;
+		this.policyTerm = policyTerm;
+		this.effectiveDate = effectiveDate;
+		this.expiryDate = expiryDate;
+		this.paymentFrequency = paymentFrequency;
+		this.beneficiaryName = beneficiaryName;
+		this.customer = customer;
+		this.policyStatus = policyStatus;
+		this.policyAddOns = policyAddOns;
+	}
+	public Policy(String policyName, int coverageAmt, double premiumAmt, int policyTerm, String effectiveDate,
+			String expiryDate, String paymentFrequency, String beneficiaryName, Customer customer, String policyStatus,
+			String policyAddOns) {
+		super();
+		this.policyName = policyName;
+		this.coverageAmt = coverageAmt;
+		this.premiumAmt = premiumAmt;
+		this.policyTerm = policyTerm;
+		this.effectiveDate = effectiveDate;
+		this.expiryDate = expiryDate;
+		this.paymentFrequency = paymentFrequency;
+		this.beneficiaryName = beneficiaryName;
+		this.customer = customer;
+		this.policyStatus = policyStatus;
+		this.policyAddOns = policyAddOns;
+	}
+	public int getPolicyId() {
+		return policyId;
+	}
+	public void setPolicyId(int policyId) {
+		this.policyId = policyId;
+	}
+	public String getPolicyName() {
+		return policyName;
+	}
+	public void setPolicyName(String policyName) {
+		this.policyName = policyName;
+	}
+	public int getCoverageAmt() {
+		return coverageAmt;
+	}
+	public void setCoverageAmt(int coverageAmt) {
+		this.coverageAmt = coverageAmt;
+	}
+	public double getPremiumAmt() {
+		return premiumAmt;
+	}
+	public void setPremiumAmt(double premiumAmt) {
+		this.premiumAmt = premiumAmt;
+	}
+	public int getPolicyTerm() {
+		return policyTerm;
+	}
+	public void setPolicyTerm(int policyTerm) {
+		this.policyTerm = policyTerm;
+	}
+	public String getEffectiveDate() {
+		return effectiveDate;
+	}
+	public void setEffectiveDate(String effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+	public String getExpiryDate() {
+		return expiryDate;
+	}
+	public void setExpiryDate(String expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	public String getPaymentFrequency() {
+		return paymentFrequency;
+	}
+	public void setPaymentFrequency(String paymentFrequency) {
+		this.paymentFrequency = paymentFrequency;
+	}
+	public String getBeneficiaryName() {
+		return beneficiaryName;
+	}
+	public void setBeneficiaryName(String beneficiaryName) {
+		this.beneficiaryName = beneficiaryName;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public String getPolicyStatus() {
+		return policyStatus;
+	}
+	public void setPolicyStatus(String policyStatus) {
+		this.policyStatus = policyStatus;
+	}
+	public String getPolicyAddOns() {
+		return policyAddOns;
+	}
+	public void setPolicyAddOns(String policyAddOns) {
+		this.policyAddOns = policyAddOns;
+	}
+	@Override
+	public String toString() {
+		return "Policy [policyId=" + policyId + ", policyName=" + policyName + ", coverageAmt=" + coverageAmt
+				+ ", premiumAmt=" + premiumAmt + ", policyTerm=" + policyTerm + ", effectiveDate=" + effectiveDate
+				+ ", expiryDate=" + expiryDate + ", paymentFrequency=" + paymentFrequency + ", beneficiaryName="
+				+ beneficiaryName + ", customer=" + customer + ", policyStatus=" + policyStatus + ", policyAddOns="
+				+ policyAddOns + "]";
+	}	
+}

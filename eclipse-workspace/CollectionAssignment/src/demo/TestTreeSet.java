@@ -1,0 +1,34 @@
+package demo;
+
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.Iterator;
+
+public class TestTreeSet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeSet<String> product = new TreeSet<String>();
+		product.add("Bag");
+		product.add("Laptop");
+		product.add("Charger");
+		product.add("Books");
+		product.add("Bag");
+		product.add("Books");
+		product.add("Bottle");
+		System.out.println("\nList of all products:");
+		Iterator i = product.iterator();
+		while(i.hasNext())
+			System.out.println(i.next());
+		System.out.println("\nFirst and last product names are: ");
+		System.out.println(product.first());
+		System.out.println(product.last());
+		System.out.println("\nSize of the TreeSet product is: ");
+		System.out.println(product.size());
+		product.remove("Books");
+		System.out.println("\nSize of the TreeSet product is: ");
+		System.out.println(product.size());
+		System.out.println(product);
+	}
+
+}

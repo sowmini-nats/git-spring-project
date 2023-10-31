@@ -1,0 +1,46 @@
+package day4;
+
+import java.util.Date;
+
+public class Bill {
+	private int billNo;
+	private String custName; 
+	private Date date; 
+	private int total; 
+	private String[] items;
+	public int getBillNo() {
+		return billNo;
+	}
+	public String getCustName() {
+		return custName;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public String[] getItems() {
+		return items;
+	}
+	public void setBillNo(int billNo) {
+		this.billNo = billNo;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	public void setItems(String[] items) {
+		this.items = items;
+	}
+	public String toString() {
+		return "Bill No: "+billNo+"\nDate: "+date+"\nCustomer Name: "
+				+custName+"\nItems: "+items+"\nTotal: "+total;
+	}
+	
+}

@@ -1,0 +1,24 @@
+package day4;
+
+public class BillReports {
+	private Bill bills[] = new Bill[5];
+	public void addBill(Bill b) {
+		for(int i=0;i<5;i++) {
+			if(bills[i]==null) {
+				bills[i]=b;
+				break;
+			}
+		}
+	}
+	boolean updateBill(int billNo,int newTotal) {
+		for(int i=0;i<5;i++) {
+			if(bills[i].getBillNo()==billNo) {
+				bills[i].setTotal(newTotal);
+				System.out.println(bills[i]);
+			}
+		}
+	}
+	returns true if successfully updated
+	Bill[] getBills() return an array of type Bill
+	Bill searchBill(billNo) accepts bill no and returns details of Bill
+}

@@ -1,0 +1,5 @@
+package demo;
+
+public class CustomerReport {
+	Customer[] custList =new Customer[];
+}

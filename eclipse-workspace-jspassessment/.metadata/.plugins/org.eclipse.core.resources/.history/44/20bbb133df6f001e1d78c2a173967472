@@ -1,0 +1,5 @@
+package com.demo.hibernatedemo.config;
+
+public class HibernateUtility {
+
+}

@@ -1,0 +1,71 @@
+package com.example.demo.controller;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.model.User;
+import com.example.demo.service.LoginService;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class LoginController {
+	@Autowired
+	LoginService service;
+	@GetMapping("/login")
+	public String displayLogin() {
+		return "login";
+	}
+	
+	@PostMapping("/login")
+	public String loginValidation(int userId,String password,String path,HttpServletRequest request) {
+		String value = service.validateUser(userId, password,path,request);
+		if(value.equals("Invalid Password")) {
+			return "redirect:/login";
+		} 
+		else
+			return "redirect:/home"; 
+	}
+	
+	@GetMapping("/agent-detail-all")
+	public String getAgentDetailsAll(Model model,HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		String roleType="Manager";
+		if(roleType.equals(session.getAttribute("role"))) {
+		Iterable<User> userList=service.getAllUsers();
+		Iterator<User> it=userList.iterator();
+		Iterable<User> agentList = null;
+		List<User> user1=new ArrayList<User>();
+		while(it.hasNext()) {
+			  User user =  it.next();
+			  if(user.getRole().equals("Agent")) {
+				  user1.add(user);
+			  }
+			  agentList = user1;
+		}
+		model.addAttribute("agentList",agentList);
+		return "AgentList";
+		}
+		else {
+			return "redirect:/login";
+		}
+	}
+	@GetMapping("/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:/home";
+	}
+//	@DateTimeFormat(pattern="dd-MM-yyyy")
+}

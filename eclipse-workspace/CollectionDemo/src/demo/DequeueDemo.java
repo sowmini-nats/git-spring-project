@@ -1,0 +1,60 @@
+package demo;
+
+import java.util.*;
+
+public class DequeueDemo {
+
+ 
+
+	public static void main(String[] args) {
+
+		Deque<BookData> deq = new ArrayDeque<BookData>(50);
+
+		//deq.add(new BookData(1,"Programming in C","Ramki",450));
+
+		deq.add(new BookData(2,"Programming in C","Ramki",450));
+
+		//deq.add(new BookData(3,"Programming in C","Ramki",450));
+
+		deq.add(new BookData(4,"Programming in C","Ramki",450));
+
+		deq.add(new BookData(5,"Programming in C","Ramki",450));
+
+		
+
+		
+
+		
+
+		for(BookData b: deq) {
+
+			System.out.println(b);
+
+		}
+
+		
+
+		System.out.println("----------------");
+
+		deq.offerFirst(new BookData(3,"Programming in C","Ramki",450));
+
+		deq.offerLast(new BookData(1,"Programming in C","Ramki",450));
+
+		
+
+		for(BookData b: deq) {
+
+			System.out.println(b);
+
+		}
+
+		System.out.println(deq.size());
+
+		System.out.println(deq.pollFirst());
+
+		System.out.println(deq.pollLast());
+
+	}
+
+}
+

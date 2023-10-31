@@ -1,0 +1,5 @@
+package com.demo.hibernatedemo.entities;
+
+public class Category {
+
+}

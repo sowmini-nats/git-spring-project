@@ -1,0 +1,28 @@
+package demo;
+import java.util.*;
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student s = new Student();
+		Scanner sc = new Scanner(System.in);
+		s.setNames();
+		System.out.println("\nEnter a name to search: ");
+		String name = sc.next();
+		s.searchName(name);
+		try {
+		System.out.println("\nEnter index number to search for a name: ");
+		int index = sc.nextInt();
+		s.searchName(index);
+		}
+		catch(Exception e) {
+			System.out.println("IndexOutOfBoundsException");
+		}
+		s.printNames();
+		System.out.println("\nEnter a name to remove: ");
+		String stuName = sc.next();
+		s.removeName(stuName);
+		s.printNames();
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.message;
+
+public class MessagingClient {
+	 MessageService message;
+	 public void sendNotification(String msg) {
+		 message = new SMSMessageService();
+		 System.out.println(message.sendMessage(msg));
+	}
+
+}

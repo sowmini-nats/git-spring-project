@@ -1,0 +1,61 @@
+package day3;
+
+public class MexicanPizza extends Pizza{
+	public MexicanPizza(String type, String toppings, String name, float timeForPreparation,String size) throws InvalidPizzaTypeException, InvalidPizzaSizeException{
+		super(type,toppings,name,timeForPreparation,size);
+		calculateCost();
+	}
+	public String toString() {
+		return "Mexican Pizza details are: "+super.toString()+" Cost of Pizza: "+super.getCostOfPizza();
+	}
+	@Override
+	public int calculateCost() {
+		int total = 0;
+		
+		if(super.getType().equals("veg")&&super.getSize().equals("small")) {
+			if(!super.getToppings().equals("No")) { 
+				total = 200+30;
+				super.setCostOfPizza(total);
+			}
+			else {
+				total = 200;
+				super.setCostOfPizza(total);
+			}
+		}
+		else if(super.getType().equals("veg")&&super.getSize().equals("medium")) {
+			if(!super.getToppings().equals("No")) { 
+				total = 350+30;
+				super.setCostOfPizza(total);
+			}
+			else {
+				total = 350;
+				super.setCostOfPizza(total);
+			}
+		}
+		else if(super.getType().equals("non-veg")&&super.getSize().equals("small")) {
+			if(!super.getToppings().equals("No")) { 
+				total = 270+30;
+				super.setCostOfPizza(total);
+			}
+			else {
+				total = 270;
+				super.setCostOfPizza(total);
+			}
+		}
+		else if(super.getType().equals("non-veg")&&super.getSize().equals("medium")) {
+			if(!super.getToppings().equals("No")) { 
+				total = 420+30;
+				super.setCostOfPizza(total);
+			}
+			else {
+				total = 420;
+				super.setCostOfPizza(total);
+			}
+		}
+		else {
+			System.out.println("No pizza details");
+		}
+		return total;
+	}
+	
+}

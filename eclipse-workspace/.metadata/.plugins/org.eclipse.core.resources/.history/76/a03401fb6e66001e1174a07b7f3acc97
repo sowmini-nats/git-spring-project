@@ -1,0 +1,18 @@
+package demo;
+
+import java.util.Set;
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set s = new HashSet();
+		s.add(5);
+		s.add(2);
+		s.add(2);
+		s.add(8);
+		System.out.println(s);
+		
+	}
+
+}

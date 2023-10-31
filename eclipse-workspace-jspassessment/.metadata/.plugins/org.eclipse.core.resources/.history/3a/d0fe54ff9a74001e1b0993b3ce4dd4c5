@@ -1,0 +1,58 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Agent {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int agentId;
+	private String firstName;
+	private String lastName;
+	private int Age;
+	private String emailId;
+	private String address;
+	private String phoneNumber;
+	private String status;
+	public Agent() {
+		super();
+	}
+	public Agent(int agentId, String firstName, String lastName, int age, String emailId, String address,
+			String phoneNumber, String status) {
+		super();
+		this.agentId = agentId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Age = age;
+		this.emailId = emailId;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.status = status;
+	}
+	public Agent(String firstName, String lastName, int age, String emailId, String address,
+			String phoneNumber, String status) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Age = age;
+		this.emailId = emailId;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.status = status;
+	}
+	public Agent(String firstName, String lastName, int age, String emailId, String address,
+			String phoneNumber) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Age = age;
+		this.emailId = emailId;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+	}
+	
+
+}

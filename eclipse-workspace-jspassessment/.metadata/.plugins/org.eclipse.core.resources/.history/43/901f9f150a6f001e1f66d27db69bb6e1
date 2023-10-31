@@ -1,0 +1,11 @@
+package com.message;
+
+public class MessagingClient {
+	static MessageService message;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 message = new SMSMessageService();
+		 message.sendMessage("Account created");
+	}
+
+}

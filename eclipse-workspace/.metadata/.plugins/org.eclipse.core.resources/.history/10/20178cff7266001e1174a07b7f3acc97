@@ -1,0 +1,28 @@
+package demo;
+
+import java.util.Set;
+import java.util.HashSet;
+import java.util.TreeSet;
+import java.util.Iterator;
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<String> s = new TreeSet<String>();
+		s.add("Sowmini");
+		s.add("Sneha");
+		s.add("Sona");
+		s.add("Sangeetha");
+		s.add("Sona");
+		System.out.println(s);
+		System.out.println("\nIterating using for loop");
+		for(String i:s)
+			System.out.println(i);
+		Iterator obj = s.iterator();
+		System.out.println("\nIterating using iterator");
+		while(obj.hasNext())
+			System.out.println(obj.next());
+	}
+
+}

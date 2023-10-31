@@ -1,0 +1,26 @@
+package demo;
+
+public class CustomerReport {
+	private Customer[] custList = new Customer[5];
+	
+	public void addCustomer(Customer c) {
+		for(int i=0;i<custList.length;i++) {
+			if(custList[i]==null) {
+				custList[i]=c;
+				break;
+			}
+		}
+	}
+
+	public void printList(){
+		for(int i=0;i<custList.length;i++) {
+			if(custList[i]==null) {break;}
+//			custList[i].display1();
+			custList[i].printBillNo();
+			System.out.println("\t\t\tDate: \n\n");
+			System.out.println("Customer: "+custList[i].getCustName());
+			System.out.println("Address: "+custList[i].getCustAddr());
+			System.out.println("---------");
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package com.message;
+
+public class BankApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MessagingClient client = new MessagingClient();
+		client.sendNotification("Account created");
+	}
+
+}

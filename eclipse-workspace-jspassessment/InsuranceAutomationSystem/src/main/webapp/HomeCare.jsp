@@ -1,0 +1,198 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Health</title>
+<style>
+    body {
+        font-family: arial;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color:orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .benefit {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+    .feature {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: orange;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-size: 20px;
+        text-align:justify;
+        color:white;
+    }
+ 
+    h1 {
+        font-size: 28px;
+        color:black;
+        text-align: center;
+    }
+ 
+    .content {
+        font-size: 20px;
+        line-height: 1.6;
+        color:white;
+    }
+ 
+    .astyle {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+ 
+    a:hover {
+        background-color: #0056b3;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow */
+        border: 1px solid #ccc; /* Add border */
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+        transition: background-color 0.3s; /* Add transition */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    th:hover, td:hover {
+        background-color: #f9f9f9; /* Change color on hover */
+    }
+    
+</style>
+</head>
+<body>
+<jsp:include page="navbar.jsp"/>
+<center>
+<div>
+    <h1>Home Care Insurance</h1>
+    </div>
+    <div class="container">
+    <p class="content">Home Care Insurance, also known as Home Health Care Insurance or Home Care Liability Insurance, is a specialized form of coverage designed to protect individuals or businesses that provide care or medical services to clients in their own homes. It offers financial protection against potential risks and liabilities associated with providing home-based care.</p>
+</div>
+<br>
+<h1>Benefits</h1>
+ 
+<h2 >Financial Protection</h2>
+<div class="benefit">Home insurance helps protect you from the high costs of Household care. It covers a significant portion of floor expenses, reducing the financial burden on you and your family.</div>
+<h2>Professional Liability Coverage</h2>
+<div class="benefit">Covers allegations of professional negligence, errors, or omissions in providing care, ensuring that you are financially protected if a client files a lawsuit against you.</div>
+<h2>Preventive Care</h2>
+<div class="benefit">Many Home insurance plans cover preventive services like damages, screenings, and check-ups at no additional cost. This promotes early prevention of disaster issues and overall society-being.</div>
+<h2>Emergency Care</h2>
+<div class="benefit">Home insurance covers emergency services, including Family Coverage and emergency situation needs. This ensures that you can receive critical care in times of accidents or sudden miscallaneous nightmares.</div>
+<h2>Property Damage Coverage</h2>
+<div class="benefit"> Covers damage to a client's property that may occur while providing care in their home. This includes accidental damage to belongings or the home itself.</div>
+<h2>Coverage for Equipment and Supplies</h2>
+<div class="benefit">Provides coverage for the cost of replacing or repairing specialized equipment or supplies used in providing care, such as mobility aids or medical instruments.</div>
+<br>
+ 
+<h1>Features</h1><br>
+<h2>Non-Owned Auto Coverage</h2><div class="feature">If you use your vehicle to transport clients, this coverage protects you in case of accidents or injuries that occur during transportation.</div>
+<h2>Caregiver Training and Education</h2><div class="feature"> Some policies offer resources and support for caregiver training and education, helping you maintain high standards of care.
+
+</div>
+<h2>Coinsurance</h2> <div class="feature"> Coinsurance is a percentage of the cost of a covered homecare service that you are responsible for after meeting your deductible. For instance, you might be responsible for 20% of the cost of a house lost.</div>
+<h2>Lost Wages Reimbursement</h2> <div class="feature"></h2> Some policies offer coverage for lost wages if you are required to attend court proceedings or handle legal matters related to a claim.</div>
+<h2>Preventive Care</h2> <div class="feature"> Many home insurance plans cover preventive services, such as damages, screenings, and annual check-ups, without requiring cost-sharing</div>
+<h2>Premium</h2><div class="feature">This is the amount you pay for your health insurance on a regular basis (usually monthly). Its a fundamental feature as it represents the cost of your coverage.</div>
+</center>
+<table>
+    <tr>
+        <th>Plan Options</th>
+        <th>Premium Payment Term</th>
+        <th>Policy Term</th>
+        <th>Minimum Policy Term</th>
+        <th>Maximum Policy Term</th>
+    </tr>
+    <tr>
+        <td rowspan="3">1, 2, 3, 6 & 7</td>
+        <td>Single Pay</td>
+        <td rowspan="3">5 years</td>
+        <td rowspan="3">55 years</td>
+        <td>5 years</td>
+    </tr>
+    <tr>
+        <td>Limited Pay</td>
+        <td>(PPT + 5) years</td>
+        
+    </tr>
+    <tr>
+        <td>Regular Pay</td>
+        <td>10 years</td>
+    </tr>
+    <tr>
+        <td>4, 5</td>
+        <td>Single Pay</td>
+        <td>100 minus Entry Age</td>
+        <td>5 Pay</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Single Pay</td>
+        <td>1 year</td>
+        <td>4 years</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Single Pay</td>
+        <td>70 minus Entry Age</td>
+        <td>55 years</td>
+        <td>Limited Pay</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Regular Pay</td>
+        <td>10 years</td>
+        <td>55 years</td>
+        <td></td>
+    </tr>
+</table>
+</head>
+</html>

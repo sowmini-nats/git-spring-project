@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Page</title>
+</head>
+<body>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<td>Bag</td>
+					<td>Laptop</td>
+				</tr>
+				<tr>
+					<td>Shoe</td>
+					<td>Books</td>
+				</tr>
+				<tr>
+					<td>Purse</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

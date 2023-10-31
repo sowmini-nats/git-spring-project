@@ -1,0 +1,12 @@
+package demo;
+
+public class PizzaHut {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Customer c = new Customer();
+		c.init();
+		c.display1();
+	}
+
+}

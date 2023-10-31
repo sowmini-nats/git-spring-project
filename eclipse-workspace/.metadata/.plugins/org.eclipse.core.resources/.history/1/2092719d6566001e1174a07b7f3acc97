@@ -1,0 +1,31 @@
+package demo;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
+
+public class MyList {
+	public static void main(String[] args) {
+		List myList = new ArrayList();
+		myList.add(10);
+		System.out.println(myList);
+		myList.add(1,"Sowmini");
+		System.out.println(myList);
+		myList.add("Nandakkumar");
+		System.out.println(myList);
+		myList.set(0, 1);
+		System.out.println(myList);
+		System.out.println(myList.indexOf("Nandakkumar"));
+		System.out.println(myList.contains("Sowmini"));
+		myList.remove(0);
+		System.out.println(myList);
+		myList.add(0,1);
+		System.out.println(myList);
+		System.out.println("Using for loop");
+		for(Object i: myList)
+			System.out.println(i);
+		System.out.println("Using iterator");
+		Iterator iobj = myList.iterator();
+		while(iobj.hasNext())
+			System.out.println(iobj.next());
+	}
+}

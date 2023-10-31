@@ -1,0 +1,21 @@
+package com.demo.SpringDemo;
+
+import java.util.Scanner;
+
+import com.demo.SpringDemo.library.ProductComponent;
+
+public class App {
+  public static void main(String[] args) {
+    ProductComponent product = new ProductComponent();
+    Scanner sc = new Scanner(System.in);
+    while(true) {
+    	System.out.println("Enter product");
+    	String item = sc.next();
+    	if(item.equals("end")) {
+    		System.out.println("Thank you!");
+    		break;
+    	}
+    	System.out.println(product.viewAddCart(item));
+    }
+  }
+}

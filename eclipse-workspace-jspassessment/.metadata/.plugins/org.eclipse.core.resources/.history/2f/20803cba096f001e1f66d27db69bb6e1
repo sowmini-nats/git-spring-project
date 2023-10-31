@@ -1,0 +1,7 @@
+package com.message;
+
+public class EmailMessageService {
+	String sendMessage(String msg) {
+		return "Email sent " + msg;
+	}
+}

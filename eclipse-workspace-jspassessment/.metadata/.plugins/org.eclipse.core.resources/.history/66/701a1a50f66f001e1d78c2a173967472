@@ -1,0 +1,19 @@
+package com.demo.hibernatedemo;
+
+public class App4 {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory=HibernateUtility.getSessionFactoryObject();
+		 Session session=sessionFactory.openSession();
+		 Query query= session.createNativeQuery("select prdid,prdname from product where prdcategory=?");
+		 query.setParameter(1, "Toy");
+		 List<Object[]> products=query.getResultList();
+		 for(Object[] p:products) {
+			 for(Object o:p)
+			 System.out.println(o);
+		 }
+		 session.close();
+
+	}
+
+}

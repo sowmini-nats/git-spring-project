@@ -1,0 +1,26 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.User;
+import com.example.demo.repositories.UserRepository;
+
+@Service
+public class ManagerService {
+	@Autowired
+	UserRepository userRepository;
+	
+	public Iterable<User> getAllUsers() {
+		Iterable<User> users=userRepository.findAll();
+		return users;
+	}
+
+	public void deleteAgent(int id) {
+		User user = userRepository.findById(id).get();
+		System.out.println(user);
+		if(user.getStatus().equals("Active")){
+			user.setStatus("Inactive");
+		}
+	}
+}

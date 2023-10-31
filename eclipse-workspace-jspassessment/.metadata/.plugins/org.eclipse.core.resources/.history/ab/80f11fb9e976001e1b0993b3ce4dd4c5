@@ -1,0 +1,16 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Policy;
+@Autowired
+PolicyRepository policyRepository;
+
+@Service
+public class PolicyService {
+	public String savePolicy(Policy policy) {
+		repository.save(policy);
+		return "policy added";
+	}
+
+}
